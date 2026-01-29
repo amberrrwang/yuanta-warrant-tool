@@ -13,13 +13,13 @@ from datetime import datetime
 import openpyxl, os, re, time
 import requests 
 # ======= Streamlit 介面 =======
-st.set_page_config(page_title="元大權證抓取工具")
+st.set_page_config(page_title="權證抓取工具")
 
-st.title("📈 權證資料即時抓取")
+st.title("權證資料即時抓取")
 
 # 介面設定
 target_wids = st.text_area("請輸入權證代碼 (用逗號或換行隔開)", value="00637L, 03111U")
-process_btn = st.button("開始抓取並產製 Excel")
+process_btn = st.button("開始抓取並製作Excel")
 
 if process_btn:
     wid_list = [w.strip() for w in target_wids.replace('\n', ',').split(',') if w.strip()]
